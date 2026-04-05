@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Intelligence System — Global Climate Risk Dashboard</title>
+    <meta name="description"
+        content="Interactive climate intelligence dashboard with CO₂ emissions tracking, risk scoring, forecasting, and policy simulation for 190+ countries.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Plotly for charts -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <!-- ─── NAVIGATION ─── -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-brand">
+            <div class="nav-logo">
+                <svg viewBox="0 0 32 32" width="32" height="32">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#06d6a0" />
+                            <stop offset="100%" style="stop-color:#118ab2" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="16" cy="16" r="14" fill="none" stroke="url(#logoGrad)" stroke-width="2.5" />
+                    <path d="M8 20 Q12 8 16 16 Q20 24 24 12" fill="none" stroke="url(#logoGrad)" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </div>
+            <span class="nav-title">Climate Intelligence</span>
+        </div>
+        <div class="nav-tabs" id="nav-tabs">
+            <button class="nav-tab active" data-tab="overview" id="tab-overview">
+                <span class="tab-icon">🌍</span> Global Overview
+            </button>
+            <button class="nav-tab" data-tab="country" id="tab-country">
+                <span class="tab-icon">📈</span> Country Deep Dive
+            </button>
+            <button class="nav-tab" data-tab="risk" id="tab-risk">
+                <span class="tab-icon">⚠️</span> Risk Intelligence
+            </button>
+            <button class="nav-tab" data-tab="simulate" id="tab-simulate">
+                <span class="tab-icon">🧪</span> Policy Simulation
+            </button>
+        </div>
+        <div class="nav-status" id="nav-status">
+            <span class="status-dot"></span>
+            <span id="status-text">Loading...</span>
+        </div>
+    </nav>
+
+    <!-- ─── TAB: GLOBAL OVERVIEW ─── -->
+    <section class="tab-content active" id="content-overview">
+        <div class="page-header">
+            <h1>Global Climate Overview</h1>
+            <p class="subtitle">Real-time insights into global emissions, temperature trends, and climate risk.</p>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid" id="kpi-grid">
+            <div class="kpi-card" id="kpi-co2">
+                <div class="kpi-icon">🏭</div>
+                <div class="kpi-content">
+                    <div class="kpi-value" id="kpi-total-co2">—</div>
+                    <div class="kpi-label">Global CO₂ Emissions (Gt)</div>
+                </div>
+                <div class="kpi-trend" id="kpi-co2-trend"></div>
+            </div>
+            <div class="kpi-card" id="kpi-temp">
+                <div class="kpi-icon">🌡️</div>
+                <div class="kpi-content">
+                    <div class="kpi-value" id="kpi-temp-anomaly">—</div>
+                    <div class="kpi-label">Avg Temperature Anomaly (°C)</div>
+                </div>
+                <div class="kpi-trend" id="kpi-temp-trend"></div>
+            </div>
+            <div class="kpi-card" id="kpi-renewables">
+                <div class="kpi-icon">⚡</div>
+                <div class="kpi-content">
+                    <div class="kpi-value" id="kpi-renewables-val">—</div>
+                    <div class="kpi-label">Avg Renewables Share</div>
+                </div>
+                <div class="kpi-trend" id="kpi-ren-trend"></div>
+            </div>
+            <div class="kpi-card" id="kpi-risk-avg">
+                <div class="kpi-icon">🛡️</div>
+                <div class="kpi-content">
+                    <div class="kpi-value" id="kpi-avg-risk">—</div>
+                    <div class="kpi-label">Avg Climate Risk Score</div>
+                </div>
+                <div class="kpi-trend" id="kpi-risk-trend"></div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+            <div class="chart-card large" id="card-emissions-trend">
+                <div class="chart-header">
+                    <h3>Global CO₂ Emissions Trend</h3>
+                    <span class="chart-badge">1990–Present</span>
+                </div>
+                <div class="chart-body" id="chart-emissions-trend"></div>
+            </div>
+            <div class="chart-card" id="card-top-emitters">
+                <div class="chart-header">
+                    <h3>Top 10 Emitters</h3>
+                    <span class="chart-badge">Latest Year</span>
+                </div>
+                <div class="chart-body" id="chart-top-emitters"></div>
+            </div>
+        </div>
+
+        <!-- World Map -->
+        <div class="chart-card full-width" id="card-world-map">
+            <div class="chart-header">
+                <h3>Global CO₂ Emissions Map</h3>
+                <div class="chart-controls">
+                    <select id="map-metric" class="select-control">
+                        <option value="co2_per_capita">CO₂ per Capita</option>
+                        <option value="risk_score">Risk Score</option>
+                        <option value="renewables_share">Renewables %</option>
+                        <option value="coal_share">Coal Share %</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-body tall" id="chart-world-map"></div>
+        </div>
+    </section>
+
+    <!-- ─── TAB: COUNTRY DEEP DIVE ─── -->
+    <section class="tab-content" id="content-country">
+        <div class="page-header">
+            <h1>Country Deep Dive</h1>
+            <p class="subtitle">Explore detailed climate metrics and forecasts for any country.</p>
+        </div>
+
+        <!-- Country Selector -->
+        <div class="selector-bar" id="country-selector-bar">
+            <div class="search-wrapper">
+                <input type="text" id="country-search" class="search-input" placeholder="🔍  Search countries..."
+                    autocomplete="off">
+                <div class="search-dropdown" id="country-dropdown"></div>
+            </div>
+            <div class="selected-country" id="selected-country-info">
+                <span class="country-flag" id="country-flag"></span>
+                <span class="country-name-display" id="country-name-display">Select a country</span>
+                <span class="country-iso" id="country-iso-display"></span>
+            </div>
+        </div>
+
+        <!-- Country KPIs -->
+        <div class="kpi-grid four-col" id="country-kpis">
+            <div class="kpi-card mini">
+                <div class="kpi-content">
+                    <div class="kpi-value" id="ckpi-co2">—</div>
+                    <div class="kpi-label">CO₂/Capita (t)</div>
+                </div>
+            </div>
+            <div class="kpi-card mini">
+                <div class="kpi-content">
+                    <div class="kpi-value" id="ckpi-risk">—</div>
+                    <div class="kpi-label">Risk Score</div>
+                </div>
+            </div>
+            <div class="kpi-card mini">
+                <div class="kpi-content">
+                    <div class="kpi-value" id="ckpi-renewables">—</div>
+                    <div class="kpi-label">Renewables %</div>
+                </div>
+            </div>
+            <div class="kpi-card mini">
+                <div class="kpi-content">
+                    <div class="kpi-value" id="ckpi-coal">—</div>
+                    <div class="kpi-label">Coal Share %</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Country Charts -->
+        <div class="charts-row">
+            <div class="chart-card large" id="card-country-forecast">
+                <div class="chart-header">
+                    <h3>CO₂ Emissions — Historical + Forecast</h3>
+                    <span class="chart-badge" id="forecast-badge">Prophet Model</span>
+                </div>
+                <div class="chart-body" id="chart-country-forecast"></div>
+            </div>
+            <div class="chart-card" id="card-risk-gauge">
+                <div class="chart-header">
+                    <h3>Climate Risk Score</h3>
+                </div>
+                <div class="chart-body" id="chart-risk-gauge"></div>
+            </div>
+        </div>
+
+        <div class="charts-row">
+            <div class="chart-card" id="card-energy-mix">
+                <div class="chart-header">
+                    <h3>Energy Mix Breakdown</h3>
+                </div>
+                <div class="chart-body" id="chart-energy-mix"></div>
+            </div>
+            <div class="chart-card" id="card-country-shap">
+                <div class="chart-header">
+                    <h3>Risk Drivers (SHAP)</h3>
+                </div>
+                <div class="chart-body" id="chart-country-shap"></div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="card-panel" id="card-recommendations">
+            <div class="panel-header">
+                <h3>💡 Recommended Actions</h3>
+            </div>
+            <div class="panel-body" id="recommendations-list">
+                <p class="placeholder-text">Select a country to view recommendations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── TAB: RISK INTELLIGENCE ─── -->
+    <section class="tab-content" id="content-risk">
+        <div class="page-header">
+            <h1>Risk Intelligence</h1>
+            <p class="subtitle">Identify high-risk regions, understand risk drivers, and explore country clusters.</p>
+        </div>
+
+        <div class="charts-row">
+            <div class="chart-card large" id="card-risk-ranking">
+                <div class="chart-header">
+                    <h3>Top 15 High-Risk Countries</h3>
+                    <span class="chart-badge danger">⚠️ Highest Risk</span>
+                </div>
+                <div class="chart-body" id="chart-risk-ranking"></div>
+            </div>
+            <div class="chart-card" id="card-feature-importance">
+                <div class="chart-header">
+                    <h3>Global Risk Drivers</h3>
+                    <span class="chart-badge">SHAP Feature Importance</span>
+                </div>
+                <div class="chart-body" id="chart-feature-importance"></div>
+            </div>
+        </div>
+
+        <div class="charts-row">
+            <div class="chart-card" id="card-clusters">
+                <div class="chart-header">
+                    <h3>Country Clusters</h3>
+                    <span class="chart-badge">K-Means</span>
+                </div>
+                <div class="chart-body" id="chart-clusters"></div>
+            </div>
+            <div class="chart-card" id="card-cluster-table">
+                <div class="chart-header">
+                    <h3>Cluster Breakdown</h3>
+                </div>
+                <div class="chart-body scroll" id="cluster-table"></div>
+            </div>
+        </div>
+
+        <!-- Risk Map -->
+        <div class="chart-card full-width" id="card-risk-map">
+            <div class="chart-header">
+                <h3>Global Risk Score Map</h3>
+            </div>
+            <div class="chart-body tall" id="chart-risk-map"></div>
+        </div>
+    </section>
+
+    <!-- ─── TAB: POLICY SIMULATION ─── -->
+    <section class="tab-content" id="content-simulate">
+        <div class="page-header">
+            <h1>Policy Simulation</h1>
+            <p class="subtitle">Model what-if scenarios — see how emission reduction and renewable adoption impact
+                climate risk.</p>
+        </div>
+
+        <!-- Simulation Controls -->
+        <div class="sim-controls" id="sim-controls">
+            <div class="sim-country-select">
+                <label>Select Country</label>
+                <select id="sim-country" class="select-control large"></select>
+            </div>
+            <div class="sim-slider-group">
+                <label>Reduce Emissions by <span class="slider-value" id="sim-emission-val">0%</span></label>
+                <input type="range" id="sim-emission-slider" min="0" max="80" value="0" class="slider">
+            </div>
+            <div class="sim-slider-group">
+                <label>Increase Renewables by <span class="slider-value" id="sim-renewables-val">+0pp</span></label>
+                <input type="range" id="sim-renewables-slider" min="0" max="50" value="0" class="slider">
+            </div>
+            <button class="btn-simulate" id="btn-simulate">
+                🧪 Run Simulation
+            </button>
+        </div>
+
+        <!-- Simulation Results -->
+        <div class="sim-results" id="sim-results" style="display:none;">
+            <div class="sim-compare-grid">
+                <div class="sim-card original">
+                    <h4>📊 Current State</h4>
+                    <div class="sim-metric">
+                        <span class="sim-label">Risk Score</span>
+                        <span class="sim-value" id="sim-orig-risk">—</span>
+                    </div>
+                    <div class="sim-metric">
+                        <span class="sim-label">CO₂/Capita</span>
+                        <span class="sim-value" id="sim-orig-co2">—</span>
+                    </div>
+                    <div class="sim-metric">
+                        <span class="sim-label">Renewables</span>
+                        <span class="sim-value" id="sim-orig-ren">—</span>
+                    </div>
+                    <div class="sim-metric">
+                        <span class="sim-label">Coal Share</span>
+                        <span class="sim-value" id="sim-orig-coal">—</span>
+                    </div>
+                </div>
+                <div class="sim-arrow">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <path d="M12 24 H36 M28 16 L36 24 L28 32" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" />
+                    </svg>
+                    <div class="sim-delta" id="sim-risk-delta">—</div>
+                </div>
+                <div class="sim-card simulated">
+                    <h4>🧪 After Policy</h4>
+                    <div class="sim-metric">
+                        <span class="sim-label">Risk Score</span>
+                        <span class="sim-value highlight" id="sim-new-risk">—</span>
+                    </div>
+                    <div class="sim-metric">
+                        <span class="sim-label">CO₂/Capita</span>
+                        <span class="sim-value" id="sim-new-co2">—</span>
+                    </div>
+                    <div class="sim-metric">
+                        <span class="sim-label">Renewables</span>
+                        <span class="sim-value" id="sim-new-ren">—</span>
+                    </div>
+                    <div class="sim-metric">
+                        <span class="sim-label">Coal Share</span>
+                        <span class="sim-value" id="sim-new-coal">—</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forecast Comparison Chart -->
+            <div class="chart-card full-width" id="card-sim-forecast">
+                <div class="chart-header">
+                    <h3>Forecast Comparison — Original vs. Policy Scenario</h3>
+                </div>
+                <div class="chart-body" id="chart-sim-forecast"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <p>Climate Intelligence System v1.0 — Data: OWID, NASA GISTEMP, World Bank, ND-GAIN | ML: Prophet, XGBoost,
+            SHAP, K-Means</p>
+    </footer>
+
+    <script src="/static/app.js?v=3"></script>
+</body>
+
+</html>

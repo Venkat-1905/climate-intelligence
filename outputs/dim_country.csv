@@ -1,0 +1,218 @@
+country_id,country_name,continent,income_group,iso_code
+1,Aruba,Other,Unknown,ABW
+2,Afghanistan,Asia,Low,AFG
+3,Angola,Africa,Unknown,AGO
+4,Anguilla,Other,Unknown,AIA
+5,Albania,Europe,Unknown,ALB
+6,Andorra,Europe,Unknown,AND
+7,United Arab Emirates,Asia,High,ARE
+8,Argentina,South America,Upper-middle,ARG
+9,Armenia,Asia,Upper-middle,ARM
+10,Antigua and Barbuda,North America,Unknown,ATG
+11,Australia,Oceania,High,AUS
+12,Austria,Europe,High,AUT
+13,Azerbaijan,Asia,Upper-middle,AZE
+14,Burundi,Africa,Low,BDI
+15,Belgium,Europe,High,BEL
+16,Benin,Africa,Unknown,BEN
+17,Bonaire Sint Eustatius and Saba,Other,Unknown,BES
+18,Burkina Faso,Africa,Low,BFA
+19,Bangladesh,Asia,Lower-middle,BGD
+20,Bulgaria,Europe,Upper-middle,BGR
+21,Bahrain,Asia,High,BHR
+22,Bahamas,North America,Unknown,BHS
+23,Bosnia and Herzegovina,Europe,Unknown,BIH
+24,Belarus,Europe,Unknown,BLR
+25,Belize,North America,Unknown,BLZ
+26,Bermuda,Other,Unknown,BMU
+27,Bolivia,South America,Lower-middle,BOL
+28,Brazil,South America,Upper-middle,BRA
+29,Barbados,North America,Unknown,BRB
+30,Brunei,Asia,Unknown,BRN
+31,Bhutan,Asia,Unknown,BTN
+32,Botswana,Africa,Unknown,BWA
+33,Central African Republic,Africa,Low,CAF
+34,Canada,North America,High,CAN
+35,Switzerland,Europe,High,CHE
+36,Chile,South America,High,CHL
+37,China,Asia,Upper-middle,CHN
+38,Cote d'Ivoire,Africa,Lower-middle,CIV
+39,Cameroon,Africa,Lower-middle,CMR
+40,Democratic Republic of Congo,Africa,Low,COD
+41,Congo,Africa,Unknown,COG
+42,Cook Islands,Other,Unknown,COK
+43,Colombia,South America,Upper-middle,COL
+44,Comoros,Africa,Unknown,COM
+45,Cape Verde,Africa,Unknown,CPV
+46,Costa Rica,North America,Unknown,CRI
+47,Cuba,North America,Unknown,CUB
+48,Curacao,Other,Unknown,CUW
+49,Christmas Island,Other,Unknown,CXR
+50,Cyprus,Europe,High,CYP
+51,Czechia,Europe,High,CZE
+52,Germany,Europe,High,DEU
+53,Djibouti,Africa,Unknown,DJI
+54,Dominica,North America,Unknown,DMA
+55,Denmark,Europe,High,DNK
+56,Dominican Republic,North America,Upper-middle,DOM
+57,Algeria,Africa,Upper-middle,DZA
+58,Ecuador,South America,Upper-middle,ECU
+59,Egypt,Africa,Lower-middle,EGY
+60,Eritrea,Africa,Low,ERI
+61,Spain,Europe,High,ESP
+62,Estonia,Europe,High,EST
+63,Ethiopia,Africa,Low,ETH
+64,Finland,Europe,High,FIN
+65,Fiji,Oceania,Unknown,FJI
+66,France,Europe,High,FRA
+67,Faroe Islands,Other,Unknown,FRO
+68,Micronesia (country),Oceania,Unknown,FSM
+69,Gabon,Africa,Unknown,GAB
+70,United Kingdom,Europe,High,GBR
+71,Georgia,Asia,Upper-middle,GEO
+72,Ghana,Africa,Lower-middle,GHA
+73,Guinea,Africa,Unknown,GIN
+74,Gambia,Africa,Unknown,GMB
+75,Guinea-Bissau,Africa,Low,GNB
+76,Equatorial Guinea,Africa,Unknown,GNQ
+77,Greece,Europe,High,GRC
+78,Grenada,North America,Unknown,GRD
+79,Greenland,Other,Unknown,GRL
+80,Guatemala,North America,Unknown,GTM
+81,Guyana,South America,Unknown,GUY
+82,Hong Kong,Other,Unknown,HKG
+83,Honduras,North America,Lower-middle,HND
+84,Croatia,Europe,High,HRV
+85,Haiti,North America,Low,HTI
+86,Hungary,Europe,High,HUN
+87,Indonesia,Asia,Upper-middle,IDN
+88,India,Asia,Lower-middle,IND
+89,Ireland,Europe,High,IRL
+90,Iran,Asia,Upper-middle,IRN
+91,Iraq,Asia,Upper-middle,IRQ
+92,Iceland,Europe,High,ISL
+93,Israel,Asia,High,ISR
+94,Italy,Europe,High,ITA
+95,Jamaica,North America,Upper-middle,JAM
+96,Jordan,Asia,Upper-middle,JOR
+97,Japan,Asia,High,JPN
+98,Kazakhstan,Asia,Upper-middle,KAZ
+99,Kenya,Africa,Lower-middle,KEN
+100,Kyrgyzstan,Asia,Lower-middle,KGZ
+101,Cambodia,Asia,Lower-middle,KHM
+102,Kiribati,Oceania,Unknown,KIR
+103,Saint Kitts and Nevis,North America,Unknown,KNA
+104,South Korea,Asia,High,KOR
+105,Kuwait,Asia,High,KWT
+106,Laos,Asia,Lower-middle,LAO
+107,Lebanon,Asia,Upper-middle,LBN
+108,Liberia,Africa,Low,LBR
+109,Libya,Africa,Unknown,LBY
+110,Saint Lucia,North America,Unknown,LCA
+111,Liechtenstein,Europe,Unknown,LIE
+112,Sri Lanka,Asia,Lower-middle,LKA
+113,Lesotho,Africa,Unknown,LSO
+114,Lithuania,Europe,High,LTU
+115,Luxembourg,Europe,High,LUX
+116,Latvia,Europe,High,LVA
+117,Macao,Other,Unknown,MAC
+118,Morocco,Africa,Lower-middle,MAR
+119,Monaco,Europe,Unknown,MCO
+120,Moldova,Europe,Lower-middle,MDA
+121,Madagascar,Africa,Low,MDG
+122,Maldives,Asia,Unknown,MDV
+123,Mexico,North America,Upper-middle,MEX
+124,Marshall Islands,Oceania,Unknown,MHL
+125,North Macedonia,Europe,Unknown,MKD
+126,Mali,Africa,Low,MLI
+127,Malta,Europe,High,MLT
+128,Myanmar,Asia,Lower-middle,MMR
+129,Montenegro,Europe,Unknown,MNE
+130,Mongolia,Asia,Unknown,MNG
+131,Mozambique,Africa,Low,MOZ
+132,Mauritania,Africa,Unknown,MRT
+133,Montserrat,Other,Unknown,MSR
+134,Mauritius,Africa,Unknown,MUS
+135,Malawi,Africa,Low,MWI
+136,Malaysia,Asia,Upper-middle,MYS
+137,Namibia,Africa,Unknown,NAM
+138,New Caledonia,Other,Unknown,NCL
+139,Niger,Africa,Low,NER
+140,Nigeria,Africa,Lower-middle,NGA
+141,Nicaragua,North America,Lower-middle,NIC
+142,Niue,Other,Unknown,NIU
+143,Netherlands,Europe,High,NLD
+144,Norway,Europe,High,NOR
+145,Nepal,Asia,Lower-middle,NPL
+146,Nauru,Oceania,Unknown,NRU
+147,New Zealand,Oceania,High,NZL
+148,Oman,Asia,High,OMN
+149,Pakistan,Asia,Lower-middle,PAK
+150,Panama,North America,Unknown,PAN
+151,Peru,South America,Upper-middle,PER
+152,Philippines,Asia,Lower-middle,PHL
+153,Palau,Oceania,Unknown,PLW
+154,Papua New Guinea,Oceania,Unknown,PNG
+155,Poland,Europe,High,POL
+156,North Korea,Asia,Unknown,PRK
+157,Portugal,Europe,High,PRT
+158,Paraguay,South America,Unknown,PRY
+159,Palestine,Asia,Unknown,PSE
+160,French Polynesia,Other,Unknown,PYF
+161,Qatar,Asia,High,QAT
+162,Romania,Europe,Upper-middle,ROU
+163,Russia,Europe,Upper-middle,RUS
+164,Rwanda,Africa,Low,RWA
+165,Saudi Arabia,Asia,High,SAU
+166,Sudan,Africa,Low,SDN
+167,Senegal,Africa,Lower-middle,SEN
+168,Singapore,Asia,High,SGP
+169,Saint Helena,Other,Unknown,SHN
+170,Solomon Islands,Oceania,Unknown,SLB
+171,Sierra Leone,Africa,Low,SLE
+172,El Salvador,North America,Lower-middle,SLV
+173,San Marino,Europe,Unknown,SMR
+174,Somalia,Africa,Low,SOM
+175,Saint Pierre and Miquelon,Other,Unknown,SPM
+176,Serbia,Europe,Unknown,SRB
+177,South Sudan,Africa,Low,SSD
+178,Sao Tome and Principe,Africa,Unknown,STP
+179,Suriname,South America,Unknown,SUR
+180,Slovakia,Europe,High,SVK
+181,Slovenia,Europe,High,SVN
+182,Sweden,Europe,High,SWE
+183,Eswatini,Africa,Unknown,SWZ
+184,Sint Maarten (Dutch part),Other,Unknown,SXM
+185,Seychelles,Africa,Unknown,SYC
+186,Syria,Asia,Unknown,SYR
+187,Turks and Caicos Islands,Other,Unknown,TCA
+188,Chad,Africa,Low,TCD
+189,Togo,Africa,Unknown,TGO
+190,Thailand,Asia,Upper-middle,THA
+191,Tajikistan,Asia,Lower-middle,TJK
+192,Turkmenistan,Asia,Unknown,TKM
+193,East Timor,Asia,Unknown,TLS
+194,Tonga,Oceania,Unknown,TON
+195,Trinidad and Tobago,North America,Unknown,TTO
+196,Tunisia,Africa,Lower-middle,TUN
+197,Turkey,Asia,Upper-middle,TUR
+198,Tuvalu,Oceania,Unknown,TUV
+199,Taiwan,Asia,High,TWN
+200,Tanzania,Africa,Lower-middle,TZA
+201,Uganda,Africa,Low,UGA
+202,Ukraine,Europe,Lower-middle,UKR
+203,Uruguay,South America,High,URY
+204,United States,North America,High,USA
+205,Uzbekistan,Asia,Lower-middle,UZB
+206,Vatican,Other,Unknown,VAT
+207,Saint Vincent and the Grenadines,North America,Unknown,VCT
+208,Venezuela,South America,Unknown,VEN
+209,British Virgin Islands,Other,Unknown,VGB
+210,Vietnam,Asia,Lower-middle,VNM
+211,Vanuatu,Oceania,Unknown,VUT
+212,Wallis and Futuna,Other,Unknown,WLF
+213,Samoa,Oceania,Unknown,WSM
+214,Yemen,Asia,Low,YEM
+215,South Africa,Africa,Upper-middle,ZAF
+216,Zambia,Africa,Lower-middle,ZMB
+217,Zimbabwe,Africa,Unknown,ZWE

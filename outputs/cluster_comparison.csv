@@ -1,0 +1,3 @@
+algorithm,silhouette_score,n_clusters,chosen,reason
+K-Means (k=3),0.30357951171369035,3,True,Lower silhouette but stable
+DBSCAN (dbscan_eps0.7),0.39518495417554983,2,False,Better at irregular shapes

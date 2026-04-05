@@ -1,0 +1,106 @@
+iso_code,country,feature_rule,lime_weight
+TCD,Chad,co2_per_capita <= 0.84,38.086346703962306
+TCD,Chad,coal_share <= 0.00,-4.732493273726356
+TCD,Chad,renewables_share > 7.67,0.8958080994712138
+TCD,Chad,-14.90 < sustainability_score <= 0.00,-0.8271185255724286
+TCD,Chad,co2_growth_rate <= 0.01,-0.5337396363445288
+TCD,Chad,energy_intensity <= 0.00,0.0
+TCD,Chad,temperature_anomaly <= 0.57,0.0
+NER,Niger,co2_per_capita <= 0.84,37.318215540170506
+NER,Niger,0.78 < coal_share <= 19.12,1.0726405956332075
+NER,Niger,0.01 < co2_growth_rate <= 1.79,-0.6787041744101688
+NER,Niger,0.00 < renewables_share <= 4.09,-0.5732090303633043
+NER,Niger,-14.90 < sustainability_score <= 0.00,-0.06800202799826464
+NER,Niger,energy_intensity <= 0.00,0.0
+NER,Niger,temperature_anomaly <= 0.57,0.0
+SLB,Solomon Islands,co2_per_capita <= 0.84,37.53477782441549
+SLB,Solomon Islands,coal_share <= 0.00,-5.1436386256220255
+SLB,Solomon Islands,renewables_share <= 0.00,2.0328010888879997
+SLB,Solomon Islands,co2_growth_rate > 3.88,1.284377071271807
+SLB,Solomon Islands,-14.90 < sustainability_score <= 0.00,-0.5420263817879295
+SLB,Solomon Islands,energy_intensity <= 0.00,0.0
+SLB,Solomon Islands,temperature_anomaly <= 0.57,0.0
+FSM,Micronesia (country),0.84 < co2_per_capita <= 3.10,7.019005996457095
+FSM,Micronesia (country),coal_share <= 0.00,-5.353496547535516
+FSM,Micronesia (country),renewables_share <= 0.00,2.784883734651456
+FSM,Micronesia (country),co2_growth_rate > 3.88,1.0975773710594867
+FSM,Micronesia (country),-14.90 < sustainability_score <= 0.00,-0.6932908831572964
+FSM,Micronesia (country),energy_intensity <= 0.00,0.0
+FSM,Micronesia (country),temperature_anomaly <= 0.57,0.0
+GNB,Guinea-Bissau,co2_per_capita <= 0.84,38.10220965231997
+GNB,Guinea-Bissau,coal_share <= 0.00,-4.698713774937845
+GNB,Guinea-Bissau,renewables_share <= 0.00,2.438396386196293
+GNB,Guinea-Bissau,co2_growth_rate > 3.88,1.4919493061071625
+GNB,Guinea-Bissau,-14.90 < sustainability_score <= 0.00,-0.09433336203602703
+GNB,Guinea-Bissau,energy_intensity <= 0.00,0.0
+GNB,Guinea-Bissau,temperature_anomaly <= 0.57,0.0
+SDN,Sudan,co2_per_capita <= 0.84,37.4659293196054
+SDN,Sudan,coal_share <= 0.00,-5.217228562987615
+SDN,Sudan,0.01 < co2_growth_rate <= 1.79,-1.3409648841583814
+SDN,Sudan,-14.90 < sustainability_score <= 0.00,-0.45447645854258145
+SDN,Sudan,0.00 < renewables_share <= 4.09,0.06739828913325464
+SDN,Sudan,energy_intensity <= 0.00,0.0
+SDN,Sudan,temperature_anomaly <= 0.57,0.0
+SOM,Somalia,co2_per_capita <= 0.84,38.13419423872045
+SOM,Somalia,coal_share <= 0.00,-4.38385374788161
+SOM,Somalia,renewables_share <= 0.00,2.8643257627427188
+SOM,Somalia,0.01 < co2_growth_rate <= 1.79,-1.3910393734230617
+SOM,Somalia,-14.90 < sustainability_score <= 0.00,-0.5653657300804011
+SOM,Somalia,energy_intensity <= 0.00,0.0
+SOM,Somalia,temperature_anomaly <= 0.57,0.0
+TON,Tonga,0.84 < co2_per_capita <= 3.10,6.6333708249461125
+TON,Tonga,coal_share <= 0.00,-6.494473066383534
+TON,Tonga,renewables_share <= 0.00,2.6577217604359507
+TON,Tonga,-14.90 < sustainability_score <= 0.00,-1.0471727537204227
+TON,Tonga,co2_growth_rate > 3.88,0.824878562219606
+TON,Tonga,energy_intensity <= 0.00,0.0
+TON,Tonga,temperature_anomaly <= 0.57,0.0
+SLE,Sierra Leone,co2_per_capita <= 0.84,37.22807683154825
+SLE,Sierra Leone,coal_share <= 0.00,-5.304785851330022
+SLE,Sierra Leone,renewables_share <= 0.00,2.3750153233068536
+SLE,Sierra Leone,co2_growth_rate > 3.88,2.0438734499362967
+SLE,Sierra Leone,-14.90 < sustainability_score <= 0.00,-0.3750946173511414
+SLE,Sierra Leone,energy_intensity <= 0.00,0.0
+SLE,Sierra Leone,temperature_anomaly <= 0.57,0.0
+ERI,Eritrea,co2_per_capita <= 0.84,37.11208305164118
+ERI,Eritrea,coal_share <= 0.00,-4.8547515917277355
+ERI,Eritrea,0.01 < co2_growth_rate <= 1.79,-1.4410865161483595
+ERI,Eritrea,renewables_share > 7.67,0.6598386449281319
+ERI,Eritrea,-14.90 < sustainability_score <= 0.00,-0.42508057691671586
+ERI,Eritrea,energy_intensity <= 0.00,0.0
+ERI,Eritrea,temperature_anomaly <= 0.57,0.0
+MHL,Marshall Islands,3.10 < co2_per_capita <= 5.87,-24.193776305923294
+MHL,Marshall Islands,coal_share <= 0.00,-4.535461071775523
+MHL,Marshall Islands,renewables_share <= 0.00,1.9138657752662487
+MHL,Marshall Islands,co2_growth_rate > 3.88,1.1652293626617138
+MHL,Marshall Islands,-14.90 < sustainability_score <= 0.00,-0.9309034069076839
+MHL,Marshall Islands,energy_intensity <= 0.00,0.0
+MHL,Marshall Islands,temperature_anomaly <= 0.57,0.0
+AFG,Afghanistan,co2_per_capita <= 0.84,37.64495864281434
+AFG,Afghanistan,coal_share > 19.12,5.728827213816934
+AFG,Afghanistan,sustainability_score <= -14.90,1.7676668019770925
+AFG,Afghanistan,1.79 < co2_growth_rate <= 3.88,-0.3354704175427319
+AFG,Afghanistan,0.00 < renewables_share <= 4.09,0.051679587882602004
+AFG,Afghanistan,energy_intensity <= 0.00,0.0
+AFG,Afghanistan,temperature_anomaly <= 0.57,0.0
+CAF,Central African Republic,co2_per_capita <= 0.84,37.712330671571635
+CAF,Central African Republic,coal_share <= 0.00,-4.959245212898059
+CAF,Central African Republic,renewables_share <= 0.00,2.2171215600716043
+CAF,Central African Republic,0.01 < co2_growth_rate <= 1.79,-1.4467203194456855
+CAF,Central African Republic,-14.90 < sustainability_score <= 0.00,-0.4224850229519627
+CAF,Central African Republic,energy_intensity <= 0.00,0.0
+CAF,Central African Republic,temperature_anomaly <= 0.57,0.0
+MRT,Mauritania,0.84 < co2_per_capita <= 3.10,5.885912309193656
+MRT,Mauritania,coal_share <= 0.00,-5.0199202185726435
+MRT,Mauritania,co2_growth_rate > 3.88,-0.285123938327438
+MRT,Mauritania,0.00 < renewables_share <= 4.09,-0.1830409261871819
+MRT,Mauritania,-14.90 < sustainability_score <= 0.00,0.1627326777092847
+MRT,Mauritania,energy_intensity <= 0.00,0.0
+MRT,Mauritania,temperature_anomaly <= 0.57,0.0
+TUV,Tuvalu,0.84 < co2_per_capita <= 3.10,6.9453126418217215
+TUV,Tuvalu,coal_share <= 0.00,-6.116276181657924
+TUV,Tuvalu,renewables_share <= 0.00,1.7555257669753648
+TUV,Tuvalu,-14.90 < sustainability_score <= 0.00,-1.2465390990739198
+TUV,Tuvalu,co2_growth_rate <= 0.01,-0.7930048920617659
+TUV,Tuvalu,energy_intensity <= 0.00,0.0
+TUV,Tuvalu,temperature_anomaly <= 0.57,0.0

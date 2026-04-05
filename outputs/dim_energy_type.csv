@@ -1,0 +1,6 @@
+energy_type,category
+coal,fossil
+gas,fossil
+oil,fossil
+renewables,clean
+nuclear,clean

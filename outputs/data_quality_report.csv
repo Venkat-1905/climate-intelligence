@@ -1,0 +1,45 @@
+timestamp,dataset,check,passed,severity,details
+2026-04-04T00:00:21.851814,OWID,row_count,True,INFO,"50,411 rows (minimum: 1,000)"
+2026-04-04T00:00:21.852140,OWID,schema_check,True,WARNING,"All 5 required columns present, 66 extra"
+2026-04-04T00:00:21.856123,OWID,null_rate[country],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:21.856531,OWID,null_rate[year],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:21.856824,OWID,null_rate[co2],False,WARNING,41.7% null (threshold: 30%)
+2026-04-04T00:00:21.873563,OWID,duplicate_check,True,WARNING,"0 duplicate rows on ['country', 'year']"
+2026-04-04T00:00:21.874560,OWID,freshness_check,True,INFO,Latest year: 2024 (expected >= 2020)
+2026-04-04T00:00:21.876786,OWID,range_check[year],True,WARNING,"0 values outside [1750, 2030]"
+2026-04-04T00:00:21.878549,OWID,range_check[co2],True,WARNING,"0 values outside [0, None]"
+2026-04-04T00:00:21.884207,OWID,outlier_iqr[co2_per_capita],True,INFO,"794 outliers (3.0%) outside [-12.30, 16.80]"
+2026-04-04T00:00:21.884498,OWID,type_check[co2],True,INFO,Column is float64
+2026-04-04T00:00:21.884646,OWID,type_check[population],True,INFO,Column is float64
+2026-04-04T00:00:21.884762,OWID,type_check[gdp],True,INFO,Column is float64
+2026-04-04T00:00:21.903544,NASA,row_count,True,INFO,52 rows (minimum: 50)
+2026-04-04T00:00:21.903929,NASA,schema_check,True,WARNING,"All 2 required columns present, 17 extra"
+2026-04-04T00:00:21.905603,NASA,freshness_check,True,INFO,Latest year: 2026 (expected >= 2020)
+2026-04-04T00:00:21.907307,NASA,range_check[Year],True,WARNING,"0 values outside [1880, 2030]"
+2026-04-04T00:00:22.027416,WB_Electricity,row_count,True,INFO,"7,859 rows (minimum: 500)"
+2026-04-04T00:00:22.027566,WB_Electricity,schema_check,True,WARNING,"All 3 required columns present, 40 extra"
+2026-04-04T00:00:22.028303,WB_Electricity,null_rate[REF_AREA],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.028493,WB_Electricity,null_rate[TIME_PERIOD],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.028696,WB_Electricity,null_rate[OBS_VALUE],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.028781,WB_Electricity,type_check[TIME_PERIOD],True,INFO,Column is int64
+2026-04-04T00:00:22.028830,WB_Electricity,type_check[OBS_VALUE],True,INFO,Column is float64
+2026-04-04T00:00:22.091944,WB_ElecPower,row_count,True,INFO,"6,412 rows (minimum: 500)"
+2026-04-04T00:00:22.092236,WB_ElecPower,schema_check,True,WARNING,"All 3 required columns present, 40 extra"
+2026-04-04T00:00:22.093373,WB_ElecPower,null_rate[REF_AREA],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.093729,WB_ElecPower,null_rate[TIME_PERIOD],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.094011,WB_ElecPower,null_rate[OBS_VALUE],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.094125,WB_ElecPower,type_check[TIME_PERIOD],True,INFO,Column is int64
+2026-04-04T00:00:22.094167,WB_ElecPower,type_check[OBS_VALUE],True,INFO,Column is float64
+2026-04-04T00:00:22.153187,WB_EnergyUse,row_count,True,INFO,"6,569 rows (minimum: 500)"
+2026-04-04T00:00:22.153377,WB_EnergyUse,schema_check,True,WARNING,"All 3 required columns present, 40 extra"
+2026-04-04T00:00:22.154170,WB_EnergyUse,null_rate[REF_AREA],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.154425,WB_EnergyUse,null_rate[TIME_PERIOD],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.154667,WB_EnergyUse,null_rate[OBS_VALUE],True,WARNING,0.0% null (threshold: 30%)
+2026-04-04T00:00:22.154785,WB_EnergyUse,type_check[TIME_PERIOD],True,INFO,Column is int64
+2026-04-04T00:00:22.154850,WB_EnergyUse,type_check[OBS_VALUE],True,INFO,Column is float64
+2026-04-04T00:00:22.160657,NDGAIN_gain,row_count,True,INFO,192 rows (minimum: 100)
+2026-04-04T00:00:22.160794,NDGAIN_gain,schema_check,True,WARNING,"All 2 required columns present, 29 extra"
+2026-04-04T00:00:22.164751,NDGAIN_vulnerability,row_count,True,INFO,192 rows (minimum: 100)
+2026-04-04T00:00:22.164859,NDGAIN_vulnerability,schema_check,True,WARNING,"All 2 required columns present, 29 extra"
+2026-04-04T00:00:22.169184,NDGAIN_readiness,row_count,True,INFO,192 rows (minimum: 100)
+2026-04-04T00:00:22.169297,NDGAIN_readiness,schema_check,True,WARNING,"All 2 required columns present, 29 extra"
