@@ -18,3 +18,5 @@ streamlit>=1.28.0
 fpdf2>=2.7.0
 pytest>=7.4.0
 flake8>=6.1.0
+neuralprophet>=0.6.0
+statsmodels>=0.14.0
