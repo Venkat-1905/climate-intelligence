@@ -34,7 +34,9 @@ share/python-wheels/
 *.ckpt
 .lr_find_*.ckpt
 mlruns/
-data/
+data/raw/
+data/processed/
+data/versioned/
 
 # Tests
 .tox/
